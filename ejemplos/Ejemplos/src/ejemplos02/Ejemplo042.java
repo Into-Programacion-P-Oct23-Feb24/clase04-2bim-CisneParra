@@ -12,7 +12,6 @@ package ejemplos02;
 public class Ejemplo042 {
 
       public static void main(String[] args) {
-        // 
         
         int [][] arreglo1 = {{1,2,3}, {3,2,4}, {2,6,2}};
         int [][] arreglo2 = {{1,2,3}, {2,2,2}, {3,1,2}};
@@ -35,10 +34,13 @@ public class Ejemplo042 {
         obtenerReporte(arreglo1);
         obtenerReporte(arreglo2);
         obtenerReporte(arreglo3);
-        obtenerReporte(arreglo4);
+        obtenerReporte(arreglo4); // se usa una nueva funcion
+        // en este caso deja de ser una funcion y pasa a ser un procedimiento
+        // para presentar los arreglos desde cualquier parte de la funcion principal
     }
     
     public static void obtenerReporte(int[][] arreglo1){
+        // recibe el arreglo y lo recorre para presentar
         String cadena = "";
         for (int i = 0; i < arreglo1.length; i++) {
             for (int j = 0; j < arreglo1[i].length; j++) {
