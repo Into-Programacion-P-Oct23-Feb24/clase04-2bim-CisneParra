@@ -29,8 +29,11 @@ public class Ejemplo041 {
         for (int i = 0; i < arreglo1.length; i++) {
             for (int j = 0; j < arreglo1[i].length; j++) {
               System.out.printf(" %s %d", cadenaFinal,arreglo3[i][j]);
+              System.out.printf(" %d", arreglo1[i][j]);
+              System.out.printf(" %d", arreglo2[i][j]);
               if(j==2){
               System.out.print("\n");
+              
               }
             }
         }
