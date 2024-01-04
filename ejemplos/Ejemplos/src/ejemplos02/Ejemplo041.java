@@ -12,33 +12,35 @@ package ejemplos02;
 public class Ejemplo041 {
 
     public static void main(String[] args) {
-        // 
-        int[][] primerValor = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
-        int[][] segundoValor = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
-        obtenerMultiplicacion(primerValor, segundoValor);
+        String cadenaFinal ="";
+        int[][] arreglo1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
+        int[][] arreglo2 = {{1, 2, 3}, {2, 2, 2}, {3, 2, 1}};
+        int[][] arreglo3 = new int[3][3];
+
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                arreglo3[i][j] = obtenerMultiplicacion(arreglo1[i][j],
+                        arreglo2[i][j]);}}
+             for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                arreglo3[i][j] = obtenerMultiplicacion(arreglo1[i][j], arreglo2[i][j]);
+            }
+        }
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+              System.out.printf(" %s %d", cadenaFinal,arreglo3[i][j]);
+              if(j==2){
+              System.out.print("\n");
+              }
+            }
+        }
 
     }
 
-    public static void[][] obtenerMultiplicacion(int[][] a, int[][] b) {
-        int operacion;
-        int[][] m = new int[3][3];
-
-        for (int i = 0; i < a.length; i++) {
-            String acum = "";
-            for (int j = 0; j < a[i].length; i++) {
-                if (i == j) {
-                    operacion = a[i][j] * b[i][j];
-                    m[i][j] = operacion;
-                    acum = String.format("%s%d ", acum, m[i][j]);
-                }
-                acum = String.format("%s\n",acum);
-            }
-            System.out.printf("%s\n",acum);
-        }
-        
-
-        return m;
-
+    public static int obtenerMultiplicacion(int a, int b) {
+        int multiplicacion;
+        multiplicacion = a * b;
+        return multiplicacion;
     }
 
 }
